@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A joyful, play-based preschool in Nashik helping little learners build confidence, curiosity and friendships.">
-  <title>Little Sprouts Preschool | Learn, Play & Grow in Nashik</title>
+  <meta name="description" content="Alpha Cubs Preschool in Kuvempunagar, Mysore – a Montessori preschool nurturing little minds and happy hearts. Playgroup, Nursery, LKG and UKG admissions open.">
+  <title>Alpha Cubs Preschool | Montessori Preschool in Kuvempunagar, Mysore</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
       --mint:#ccebdc; --mint-dark:#6caa89; --blue:#c9e7f8;
       --lilac:#ded5f7; --line:#eee9df; --shadow:0 18px 55px rgba(36,48,68,.09);
       --radius:26px;
+      --cub:#d9975a; --cub-light:#f6dcb8; --cub-ear:#f6c995;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -28,12 +29,15 @@
     header{position:sticky;top:0;z-index:30;background:rgba(255,253,247,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(36,48,68,.07)}
     .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
     .brand{display:flex;align-items:center;gap:11px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:25px;letter-spacing:-.5px;white-space:nowrap}
-    .brand-mark{width:43px;height:43px;border-radius:15px 15px 15px 5px;background:var(--yellow);display:grid;place-items:center;position:relative}
-    .brand-mark:before,.brand-mark:after{content:"";position:absolute;width:9px;height:19px;background:#6caa89;border-radius:100% 0 100% 0;top:7px}
-    .brand-mark:before{left:12px;transform:rotate(-28deg)}
-    .brand-mark:after{right:10px;transform:rotate(35deg) scaleX(-1)}
-    .brand-mark span{width:3px;height:14px;background:#548d6e;position:absolute;top:20px;border-radius:4px}
-    .brand-name span{color:var(--mint-dark)}
+    /* Cub face logo mark */
+    .brand-mark{width:43px;height:43px;position:relative;flex:0 0 43px}
+    .brand-mark:before,.brand-mark:after{content:"";position:absolute;top:0;width:17px;height:17px;border-radius:50%;background:var(--cub-ear);border:4px solid var(--cub)}
+    .brand-mark:before{left:0}
+    .brand-mark:after{right:0}
+    .brand-mark span{position:absolute;left:3px;right:3px;top:6px;bottom:0;border-radius:50%;background:var(--cub);z-index:1}
+    .brand-mark span:before{content:"";position:absolute;left:50%;bottom:5px;width:17px;height:13px;margin-left:-8.5px;border-radius:50%;background:var(--cub-light)}
+    .brand-mark span:after{content:"";position:absolute;left:50%;top:22px;width:6px;height:5px;margin-left:-3px;border-radius:50%;background:var(--ink);box-shadow:-7px -8px 0 -1px var(--ink),7px -8px 0 -1px var(--ink)}
+    .brand-name span{color:var(--coral)}
     .nav-links{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700;color:#586477}
     .nav-links a{transition:color .2s}
     .nav-links a:hover{color:var(--coral-dark)}
@@ -47,11 +51,17 @@
     .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:1.5px;font-size:10px;font-weight:800;color:#648d76}
     .eyebrow:before{content:"";width:22px;height:2px;background:var(--coral);border-radius:3px}
     h1,h2,h3,h4{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-.7px}
-    h1{font-size:clamp(49px,6.2vw,79px);line-height:.99;max-width:650px;margin:20px 0}
-    h1 .accent{color:var(--coral);position:relative}
+    h1{font-size:clamp(46px,5.8vw,74px);line-height:1.02;max-width:650px;margin:20px 0}
+    h1 .accent{color:var(--coral);position:relative;white-space:nowrap}
     h1 .accent:after{content:"";position:absolute;left:2px;right:0;bottom:-5px;height:8px;background:var(--yellow);border-radius:50%;z-index:-1;transform:rotate(-2deg)}
     h2{font-size:clamp(36px,4.5vw,54px);line-height:1.08}
     .lead{font-size:16px;line-height:1.85;color:var(--muted);max-width:560px}
+    .tagline{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+    .tagline span{font-family:'Fredoka';font-size:14px;font-weight:600;padding:6px 14px;border-radius:999px}
+    .tagline span:nth-child(1){background:#fff0c5;color:#9b7621}
+    .tagline span:nth-child(2){background:#e2f2fc;color:#4c85a6}
+    .tagline span:nth-child(3){background:#e2f2e8;color:#4e926b}
+    .tagline span:nth-child(4){background:#ffe5e0;color:#bd6559}
     .hero{padding:76px 0 88px;position:relative;overflow:hidden}
     .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#fff2ca;right:-205px;top:-185px;z-index:-1}
     .hero:after{content:"";position:absolute;width:150px;height:150px;border:2px dashed #e9d9a8;border-radius:50%;right:11%;bottom:20px;z-index:-1}
@@ -61,9 +71,10 @@
     .plain-link{font-size:13px;font-weight:800;border-bottom:2px solid var(--yellow);padding-bottom:3px}
     .hero-meta{display:flex;align-items:center;gap:13px;margin-top:35px;color:var(--muted);font-size:12px;font-weight:700}
     .mini-avatars{display:flex;padding-left:6px}
-    .mini-avatars span{width:32px;height:32px;margin-left:-6px;border:3px solid var(--paper);border-radius:50%;background:var(--mint);display:grid;place-items:center;font-size:10px;color:#476c57;font-weight:800}
+    .mini-avatars span{width:34px;height:34px;margin-left:-6px;border:3px solid var(--paper);border-radius:50%;background:var(--mint);display:grid;place-items:center;font-size:9px;color:#476c57;font-weight:800}
     .mini-avatars span:nth-child(2){background:var(--lilac)}
     .mini-avatars span:nth-child(3){background:var(--blue)}
+    .mini-avatars span:nth-child(4){background:#ffe5e0}
     .hero-visual{min-height:460px;position:relative;display:grid;place-items:center}
     .hero-blob{position:absolute;width:390px;height:390px;background:var(--mint);border-radius:48% 52% 44% 56% / 51% 43% 57% 49%;transform:rotate(-9deg)}
     .hero-photo{position:relative;width:min(390px,88%);height:405px;border:10px solid white;border-radius:46% 46% 30px 30px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(2deg);background:var(--blue)}
@@ -103,17 +114,18 @@
     .approach-point{display:flex;gap:10px;align-items:flex-start;font-size:12px;font-weight:800}
     .check{flex:0 0 22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#e2f2e8;color:#4e926b;font-size:12px}
     .programs{background:#fff7e5}
-    .program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .program-card{border-radius:25px;overflow:hidden;background:#fff;box-shadow:0 10px 35px rgba(36,48,68,.05);transition:transform .25s}
+    .program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .program-card{border-radius:25px;overflow:hidden;background:#fff;box-shadow:0 10px 35px rgba(36,48,68,.05);transition:transform .25s;display:flex;flex-direction:column}
     .program-card:hover{transform:translateY(-6px)}
-    .program-image{height:190px;position:relative;overflow:hidden}
+    .program-image{height:180px;position:relative;overflow:hidden}
     .program-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
     .program-card:hover .program-image img{transform:scale(1.05)}
     .age-pill{position:absolute;left:16px;bottom:14px;background:white;border-radius:999px;padding:7px 12px;font-size:10px;font-weight:800}
-    .program-body{padding:22px 23px 25px}
+    .program-body{padding:22px 22px 25px;display:flex;flex-direction:column;flex:1}
     .program-body h3{font-size:24px;margin-bottom:7px}
-    .program-body p{font-size:12px;color:var(--muted);line-height:1.8;min-height:65px}
-    .program-body a{display:inline-block;margin-top:15px;font-size:12px;font-weight:800;color:var(--coral-dark);border-bottom:1px solid var(--coral)}
+    .program-body p{font-size:12px;color:var(--muted);line-height:1.8;flex:1}
+    .program-body a{align-self:flex-start;margin-top:15px;font-size:12px;font-weight:800;color:var(--coral-dark);border-bottom:1px solid var(--coral)}
+    .program-note{text-align:center;font-size:12px;color:var(--muted);margin-top:22px}
     .day-section{background:#fff}
     .day-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:center}
     .day-intro h2{margin:14px 0}
@@ -132,7 +144,8 @@
     .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:190px 190px;gap:14px}
     .gallery img{width:100%;height:100%;object-fit:cover;border-radius:20px}
     .gallery img:first-child{grid-row:span 2}
-    .gallery-caption{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
+    .gallery img:nth-child(4){grid-column:2;grid-row:2}
+    .gallery img:nth-child(5){grid-column:3;grid-row:2}
     .safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
     .safety-copy h2{margin:14px 0}
     .safety-copy p{font-size:14px;color:var(--muted);line-height:1.9}
@@ -141,9 +154,6 @@
     .safety-list span{width:30px;height:30px;display:grid;place-items:center;background:#e3f2e9;border-radius:10px;color:#4c9068;font-size:12px}
     .safety-panel{background:var(--lilac);border-radius:28px;padding:34px;position:relative;overflow:hidden}
     .safety-photo{width:100%;height:210px;object-fit:cover;border-radius:19px;margin-bottom:22px;display:block}
-    .gallery{grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:190px 190px}
-    .gallery img:nth-child(4){grid-column:2;grid-row:2}
-    .gallery img:nth-child(5){grid-column:3;grid-row:2}
     .safety-panel:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.35);right:-45px;top:-45px}
     .safety-panel h3{font-size:28px;max-width:300px;line-height:1.15;margin-bottom:12px}
     .safety-panel p{font-size:13px;color:#5e5a70;line-height:1.8;max-width:360px}
@@ -167,6 +177,7 @@
     .contact-copy h2{margin:14px 0}
     .contact-copy>p{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:24px}
     .contact-line{display:flex;gap:13px;align-items:center;margin:17px 0;font-size:13px;font-weight:700}
+    .contact-line a:hover{color:var(--coral-dark)}
     .contact-icon{width:40px;height:40px;border-radius:13px;background:#fff;border:1px solid #f0e7d1;display:grid;place-items:center;font-family:'Fredoka';font-size:16px}
     .contact-form{background:white;padding:30px;border-radius:25px;box-shadow:var(--shadow)}
     .contact-form h3{font-size:27px;margin-bottom:4px}
@@ -182,10 +193,14 @@
     .footer-top{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:27px;border-bottom:1px solid rgba(255,255,255,.15)}
     footer .brand{color:white}
     footer .brand-name span{color:var(--yellow)}
-    .footer-tagline{font-size:12px;color:#c2cbd8;max-width:280px}
+    .footer-tagline{font-size:12px;color:#c2cbd8;max-width:300px}
+    .footer-tagline strong{display:block;font-family:'Fredoka';font-size:16px;color:#fff;font-weight:500;letter-spacing:.3px;margin-bottom:2px}
     .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:22px;font-size:11px;color:#bdc6d4}
     .footer-links{display:flex;gap:22px;font-weight:700}
     .back-top{position:fixed;right:22px;bottom:22px;width:43px;height:43px;border:0;border-radius:14px;background:var(--yellow);color:var(--ink);font-size:20px;font-weight:800;box-shadow:var(--shadow);cursor:pointer;display:none;z-index:15}
+    @media(max-width:1020px){
+      .program-grid{grid-template-columns:1fr 1fr}
+    }
     @media(max-width:900px){
       .nav-links{gap:16px}.nav-links a{font-size:12px}.nav>.btn{display:none}
       .hero-grid{gap:20px}.hero-visual{min-height:400px}.hero-blob{width:320px;height:320px}.hero-photo{height:360px;width:82%}
@@ -198,7 +213,7 @@
       .hero-grid,.approach-grid,.day-grid,.safety-grid,.contact-grid{grid-template-columns:1fr}
       .hero{padding:55px 0 65px}.hero-visual{min-height:390px;margin-top:15px}
       .trust-grid{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border:0}
-      .why-grid,.program-grid{grid-template-columns:1fr 1fr}
+      .why-grid{grid-template-columns:1fr 1fr}
       .approach-visual{max-width:600px}.approach-visual img{height:360px}
       .gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 150px 150px}
       .gallery img:first-child{grid-row:span 2}
@@ -208,7 +223,8 @@
     @media(max-width:540px){
       .container{width:calc(100% - 34px)}.announcement{font-size:10px}
       .nav{height:72px}.nav-links{top:71px}.brand{font-size:23px}
-      h1{font-size:53px}.hero-visual{min-height:330px}.hero-blob{width:265px;height:265px}
+      h1{font-size:44px}h1 .accent{white-space:normal}
+      .hero-visual{min-height:330px}.hero-blob{width:265px;height:265px}
       .hero-photo{height:300px;width:78%;border-width:8px}
       .note-one{top:35px}.note-two{bottom:28px}
       .trust-grid{gap:16px 8px}.trust-item{font-size:10px}.trust-item strong{font-size:18px}
@@ -225,12 +241,12 @@
   </style>
 </head>
 <body>
-  <div class="announcement">Admissions are open for the 2026–27 academic year <a href="#contact">Enquire now</a></div>
+  <div class="announcement">Admissions open for 2027–28 · Playgroup, Nursery, LKG &amp; UKG <a href="#contact">Enquire now</a></div>
   <header>
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="Little Sprouts home"><span class="brand-mark"><span></span></span><span class="brand-name">little <span>sprouts</span></span></a>
+      <a class="brand" href="#home" aria-label="Alpha Cubs Preschool home"><span class="brand-mark"><span></span></span><span class="brand-name">alpha <span>cubs</span></span></a>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#approach">Our Approach</a><a href="#programs">Programmes</a><a href="#day">A Day Here</a><a href="#faq">FAQs</a>
+        <a href="#home">Home</a><a href="#approach">Montessori Approach</a><a href="#programs">Programmes</a><a href="#day">A Day Here</a><a href="#faq">FAQs</a>
       </nav>
       <a class="btn" href="#contact">Schedule a visit <span>→</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
@@ -241,17 +257,18 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">A happy beginning in Nashik</span>
-          <h1>Little steps.<br><span class="accent">Big discoveries.</span></h1>
-          <p class="lead">A warm, welcoming preschool where children learn through play, build meaningful friendships and find the confidence to explore the world around them.</p>
-          <div class="hero-actions"><a class="btn" href="#contact">Discover admissions <span>→</span></a><a class="plain-link" href="#approach">What makes us different</a></div>
-          <div class="hero-meta"><div class="mini-avatars"><span>LS</span><span>KG</span><span>PG</span></div><span>A thoughtful start to your child's learning journey</span></div>
+          <span class="eyebrow">Montessori preschool · Kuvempunagar, Mysore</span>
+          <h1>Nurturing little minds &amp; <span class="accent">happy hearts.</span></h1>
+          <div class="tagline" aria-label="Play, Learn, Explore, Grow"><span>Play</span><span>Learn</span><span>Explore</span><span>Grow</span></div>
+          <p class="lead">At Alpha Cubs, children learn at their own pace in a calm, carefully prepared Montessori environment, building independence, concentration and a lifelong love of discovery.</p>
+          <div class="hero-actions"><a class="btn" href="#contact">Discover admissions <span>→</span></a><a class="plain-link" href="#approach">Why Montessori?</a></div>
+          <div class="hero-meta"><div class="mini-avatars"><span>PG</span><span>NUR</span><span>LKG</span><span>UKG</span></div><span>Four programmes, one joyful beginning</span></div>
         </div>
         <div class="hero-visual">
           <div class="hero-blob"></div>
           <div class="hero-photo"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1000&q=85" alt="Young child enjoying time outdoors"></div>
-          <div class="floating-note note-one"><span class="note-dot"></span>Curiosity comes first<strong>Every single day</strong></div>
-          <div class="floating-note note-two">A place to belong<strong>And room to bloom</strong></div>
+          <div class="floating-note note-one"><span class="note-dot"></span>Follow the child<strong>Every single day</strong></div>
+          <div class="floating-note note-two">Little cubs today<strong>Confident learners tomorrow</strong></div>
           <div class="scribble">✳</div>
         </div>
       </div>
@@ -259,35 +276,35 @@
 
     <section class="trust-strip">
       <div class="container trust-grid">
-        <div class="trust-item"><strong>Play-led</strong>Learning experiences</div>
-        <div class="trust-item"><strong>Child-first</strong>Individual attention</div>
-        <div class="trust-item"><strong>Whole-child</strong>Development focus</div>
+        <div class="trust-item"><strong>Montessori</strong>Learning approach</div>
+        <div class="trust-item"><strong>Child-paced</strong>Individual attention</div>
+        <div class="trust-item"><strong>Hands-on</strong>Prepared environment</div>
         <div class="trust-item"><strong>Family-minded</strong>Parent partnership</div>
       </div>
     </section>
 
     <section class="section why" id="why">
       <div class="container">
-        <div class="section-heading"><span class="eyebrow">The little sprouts difference</span><h2>A happy place to learn, grow and be yourself.</h2><p>Children thrive when they feel secure, encouraged and excited to discover something new. We bring all three into the everyday.</p></div>
+        <div class="section-heading"><span class="eyebrow">The Alpha Cubs difference</span><h2>A happy place to play, learn, explore and grow.</h2><p>Children thrive when they feel secure, respected and free to discover. Our Montessori classrooms bring all three into the everyday.</p></div>
         <div class="why-grid">
-          <article class="why-card"><div class="icon-tile tile-yellow">01</div><h3>Learning through play</h3><p>Stories, building activities, music, movement and creative play turn everyday moments into meaningful learning.</p></article>
-          <article class="why-card"><div class="icon-tile tile-blue">02</div><h3>Care with a personal touch</h3><p>We value every child's personality, pace and interests, creating a caring space where they can settle in comfortably.</p></article>
-          <article class="why-card"><div class="icon-tile tile-pink">03</div><h3>Confidence for life</h3><p>Children practise sharing, expressing ideas, solving little problems and taking on new experiences with confidence.</p></article>
+          <article class="why-card"><div class="icon-tile tile-yellow">01</div><h3>Learning by doing</h3><p>Hands-on Montessori materials let children touch, sort, build and explore, turning abstract ideas into real understanding.</p></article>
+          <article class="why-card"><div class="icon-tile tile-blue">02</div><h3>Their own pace</h3><p>Every child chooses meaningful work and moves forward when they are ready, guided gently by attentive teachers.</p></article>
+          <article class="why-card"><div class="icon-tile tile-pink">03</div><h3>Independence for life</h3><p>From pouring water to tidying up, everyday practical-life activities build confidence, focus and a sense of “I can do it”.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section" id="approach">
       <div class="container approach-grid">
-        <div class="approach-visual"><img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1000&q=85" alt="Children exploring and learning outdoors"><div class="approach-tag">Wonder is a way of learning.</div></div>
-        <div class="approach-copy"><span class="eyebrow">Our learning philosophy</span><h2>Small hands. Curious minds. Endless possibilities.</h2><p>We believe preschool is not about rushing children towards the next milestone. It is about giving them the time, space and encouragement to develop a strong foundation for life.</p><p>Our approach balances guided activities with child-led exploration, helping little learners build skills while enjoying the process.</p>
+        <div class="approach-visual"><img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1000&q=85" alt="Children exploring and learning outdoors"><div class="approach-tag">Help me to do it myself.</div></div>
+        <div class="approach-copy"><span class="eyebrow">Our Montessori approach</span><h2>Small hands. Curious minds. Endless possibilities.</h2><p>Montessori education respects each child as a capable, curious learner. Instead of rushing towards the next milestone, we give children the time, space and freedom to build a strong foundation for life.</p><p>Our classrooms are prepared environments with child-sized furniture and purposeful learning materials. Children choose their work, concentrate deeply and learn from their own discoveries, while our teachers observe and guide.</p>
           <div class="approach-points">
-            <div class="approach-point"><span class="check">✓</span><span>Language and communication</span></div>
-            <div class="approach-point"><span class="check">✓</span><span>Early numeracy and reasoning</span></div>
-            <div class="approach-point"><span class="check">✓</span><span>Creative expression</span></div>
-            <div class="approach-point"><span class="check">✓</span><span>Social and emotional skills</span></div>
-            <div class="approach-point"><span class="check">✓</span><span>Movement and coordination</span></div>
-            <div class="approach-point"><span class="check">✓</span><span>Independence and confidence</span></div>
+            <div class="approach-point"><span class="check">✓</span><span>Practical life skills</span></div>
+            <div class="approach-point"><span class="check">✓</span><span>Sensorial exploration</span></div>
+            <div class="approach-point"><span class="check">✓</span><span>Language and phonics</span></div>
+            <div class="approach-point"><span class="check">✓</span><span>Early mathematics</span></div>
+            <div class="approach-point"><span class="check">✓</span><span>Culture, nature and the world</span></div>
+            <div class="approach-point"><span class="check">✓</span><span>Social and emotional growth</span></div>
           </div>
           <a class="btn btn-dark" href="#programs">Explore our programmes <span>→</span></a>
         </div>
@@ -296,22 +313,24 @@
 
     <section class="section programs" id="programs">
       <div class="container">
-        <div class="section-heading"><span class="eyebrow">Find their next little adventure</span><h2>Programmes made for growing minds.</h2><p>Age groups and programme names shown here are sample content. Update them to match your school's actual admissions structure.</p></div>
+        <div class="section-heading"><span class="eyebrow">Find their next little adventure</span><h2>Programmes made for growing minds.</h2><p>From first friendships to school readiness, each programme follows the Montessori way of learning, matched to your child's stage of development.</p></div>
         <div class="program-grid">
-          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1472162314594-68f4a7b9b4a1?auto=format&fit=crop&w=800&q=85" alt="Young children playing together"><span class="age-pill">Approx. 2–3 years</span></div><div class="program-body"><h3>Playgroup</h3><p>A gentle introduction to group learning through sensory activities, music, movement and first friendships.</p><a href="#contact">Ask about Playgroup →</a></div></article>
-          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=85" alt="Bright and welcoming preschool classroom"><span class="age-pill">Approx. 3–4 years</span></div><div class="program-body"><h3>Nursery</h3><p>Building language, imagination, early concepts and independence through engaging everyday experiences.</p><a href="#contact">Ask about Nursery →</a></div></article>
-          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=85" alt="Child learning at a table"><span class="age-pill">Approx. 4–5 years</span></div><div class="program-body"><h3>Junior Kindergarten</h3><p>Strengthening foundational literacy, numeracy, communication and problem-solving in a playful way.</p><a href="#contact">Ask about Junior KG →</a></div></article>
+          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=85" alt="Young children playing together"><span class="age-pill">Approx. 1.5–2.5 years</span></div><div class="program-body"><h3>Playgroup</h3><p>A gentle first step into school life through sensory play, music, movement, simple practical-life activities and first friendships.</p><a href="#contact">Ask about Playgroup →</a></div></article>
+          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=85" alt="Bright and welcoming preschool classroom"><span class="age-pill">Approx. 2.5–3.5 years</span></div><div class="program-body"><h3>Nursery</h3><p>Building language, coordination, concentration and independence with hands-on Montessori materials and plenty of exploration.</p><a href="#contact">Ask about Nursery →</a></div></article>
+          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=85" alt="Child learning at a table"><span class="age-pill">Approx. 3.5–4.5 years</span></div><div class="program-body"><h3>LKG</h3><p>Phonics, early number sense, sensorial work and creative expression that lay the foundations for reading, writing and reasoning.</p><a href="#contact">Ask about LKG →</a></div></article>
+          <article class="program-card"><div class="program-image"><img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=800&q=85" alt="Teacher guiding a young child during a learning activity"><span class="age-pill">Approx. 4.5–5.5 years</span></div><div class="program-body"><h3>UKG</h3><p>Confident reading, writing and maths, problem-solving and independence that prepare children for a smooth move into primary school.</p><a href="#contact">Ask about UKG →</a></div></article>
         </div>
+        <p class="program-note">Age ranges are indicative. Our team will help you find the right programme for your child.</p>
       </div>
     </section>
 
     <section class="section day-section" id="day">
       <div class="container day-grid">
-        <div class="day-intro"><span class="eyebrow">A day at little sprouts</span><h2>Every day has something new to discover.</h2><p>A balanced routine helps children feel comfortable while leaving plenty of room for curiosity, movement and imagination. Here's an example of how a preschool day can flow.</p><a class="plain-link" href="#contact">Ask us about school timings</a></div>
+        <div class="day-intro"><span class="eyebrow">A day at Alpha Cubs</span><h2>Every day has something new to discover.</h2><p>A predictable Montessori rhythm helps children feel secure, while leaving plenty of room for choice, movement and imagination. Here's how a typical day flows.</p><a class="plain-link" href="#contact">Ask us about school timings</a></div>
         <div class="timeline">
-          <div class="timeline-item"><time>Welcome and settle in</time><h3>Good morning, little learners</h3><p>Warm greetings, free play and a gentle start to the day.</p></div>
-          <div class="timeline-item"><time>Circle and discovery time</time><h3>Stories, songs and new ideas</h3><p>Group conversations, language activities and guided exploration.</p></div>
-          <div class="timeline-item"><time>Creative play and movement</time><h3>Make, move and imagine</h3><p>Art, building, outdoor play and activities for growing coordination.</p></div>
+          <div class="timeline-item"><time>Welcome and settle in</time><h3>Good morning, little cubs</h3><p>Warm greetings, a calm arrival and a gentle start to the day.</p></div>
+          <div class="timeline-item"><time>Montessori work cycle</time><h3>Choose, focus and discover</h3><p>Children select activities from the prepared environment and work at their own pace, with one-on-one guidance from teachers.</p></div>
+          <div class="timeline-item"><time>Circle time and movement</time><h3>Stories, songs and outdoor play</h3><p>Group conversations, rhymes, art and outdoor play for growing bodies and imaginations.</p></div>
           <div class="timeline-item"><time>Wind down and goodbye</time><h3>One more story to take home</h3><p>A calm close to the day and a little sharing about what we discovered.</p></div>
         </div>
       </div>
@@ -319,56 +338,54 @@
 
     <section class="section spaces">
       <div class="container">
-        <div class="section-heading"><span class="eyebrow">A peek into our world</span><h2>Made for movement, imagination and discovery.</h2><p>From creative corners to shared play, the right environment gives children the freedom to explore with confidence.</p></div>
+        <div class="section-heading"><span class="eyebrow">A peek into our world</span><h2>Made for movement, imagination and discovery.</h2><p>Our prepared Montessori environment gives children the freedom to explore, choose their work and grow in confidence.</p></div>
         <div class="gallery">
           <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1000&q=85" alt="Children playing outside in a green space">
           <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=85" alt="Colourful learning classroom">
-          <img src="https://images.unsplash.com/photo-1472162314594-68f4a7b9b4a1?auto=format&fit=crop&w=700&q=85" alt="Children playing together">
-          <img src="https://images.unsplash.com/photo-1516626115347-0c4c1e6f7f3b?auto=format&fit=crop&w=700&q=85" alt="Children taking part in a creative classroom activity">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=85" alt="Children playing together">
+          <img src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=700&q=85" alt="Teacher supporting a child during a learning activity">
           <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=700&q=85" alt="Young child enjoying a playful outdoor moment">
         </div>
-        <p class="gallery-caption">Replace these sample photographs with real pictures of your classrooms, activities and school facilities.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container safety-grid">
-        <div class="safety-copy"><span class="eyebrow">Peace of mind for parents</span><h2>A caring environment makes all the difference.</h2><p>Choosing a preschool is a big step for the whole family. We believe clear communication, thoughtful routines and a welcoming atmosphere help parents and children feel more at ease.</p>
-          <div class="safety-list"><div><span>01</span>Warm and respectful interactions</div><div><span>02</span>Age-appropriate learning activities</div><div><span>03</span>Open communication with families</div><div><span>04</span>Clean, organised learning spaces</div></div>
+        <div class="safety-copy"><span class="eyebrow">Peace of mind for parents</span><h2>A caring environment makes all the difference.</h2><p>Choosing a preschool is a big step for the whole family. Clear communication, thoughtful routines and a warm, welcoming atmosphere help parents and children feel at ease from day one.</p>
+          <div class="safety-list"><div><span>01</span>Warm and respectful interactions</div><div><span>02</span>Age-appropriate Montessori activities</div><div><span>03</span>Open communication with families</div><div><span>04</span>Clean, safe and organised classrooms</div></div>
         </div>
         <div class="safety-panel"><img class="safety-photo" src="https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1000&q=85" alt="Preschool educator supporting a young child during a learning activity"><h3>Growing together, one little milestone at a time.</h3><p>We partner with parents to understand each child's progress, celebrate their efforts and support their next steps.</p><div class="safety-stat"><div><strong>Care</strong><small>At the heart of every day</small></div><div><strong>Curiosity</strong><small>In every little discovery</small></div></div></div>
       </div>
     </section>
 
     <section class="section testimonial">
-      <div class="container"><div class="quote-mark">“</div><blockquote>“The best beginning is one where a child feels happy to walk in, brave enough to try, and proud of what they discover.”</blockquote><p>THE LITTLE SPROUTS BELIEF</p></div>
+      <div class="container"><div class="quote-mark">“</div><blockquote>“The best beginning is one where a child feels happy to walk in, brave enough to try, and proud of what they discover.”</blockquote><p>THE ALPHA CUBS BELIEF</p></div>
     </section>
 
     <section class="section" id="faq">
       <div class="container">
-        <div class="section-heading"><span class="eyebrow">A few helpful answers</span><h2>Parents often ask...</h2><p>Here are a few things families usually want to know before their first preschool visit.</p></div>
+        <div class="section-heading"><span class="eyebrow">A few helpful answers</span><h2>Parents often ask...</h2><p>Here are a few things families usually want to know before their first visit to Alpha Cubs.</p></div>
         <div class="faq-wrap">
-          <div class="faq-item active"><button class="faq-question" aria-expanded="true"><span>What age can my child start preschool?</span><span>+</span></button><div class="faq-answer">Our sample programme structure begins around age two. Actual admission ages and class placement should be confirmed with the school.</div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can parents visit the preschool before admission?</span><span>+</span></button><div class="faq-answer">Yes. Families are encouraged to arrange a visit, meet the team and understand the learning environment before making an admission decision.</div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What should my child bring on the first day?</span><span>+</span></button><div class="faq-answer">The school can share a simple checklist based on the child's programme, such as a labelled water bottle, a change of clothes and any required personal items.</div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How do you keep parents updated?</span><span>+</span></button><div class="faq-answer">Parent communication can include regular updates, conversations with educators and scheduled meetings to discuss a child's experiences and progress.</div></div>
-          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How do I enquire about fees and admissions?</span><span>+</span></button><div class="faq-answer">Use the enquiry form below or contact the school directly. The admissions team can share current fees, availability, timings and required documents.</div></div>
+          <div class="faq-item active"><button class="faq-question" aria-expanded="true"><span>What age can my child start preschool?</span><span>+</span></button><div class="faq-answer">Children can begin with our Playgroup programme from around 1.5 years. We offer Playgroup, Nursery, LKG and UKG, and our team will confirm the right class for your child's age at the time of admission.</div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What is the Montessori approach?</span><span>+</span></button><div class="faq-answer">Montessori is a child-centred way of learning. Children work with hands-on materials in a prepared environment, choose their activities and learn at their own pace, while teachers observe and guide. It builds independence, concentration and a genuine love of learning.</div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can parents visit the preschool before admission?</span><span>+</span></button><div class="faq-answer">Yes. Families are welcome to visit our Kuvempunagar campus, meet the team and see our Montessori classrooms before making an admission decision. Call us on 92435 55222 to arrange a visit.</div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What should my child bring on the first day?</span><span>+</span></button><div class="faq-answer">We'll share a simple checklist based on your child's programme, such as a labelled water bottle, a change of clothes and any required personal items.</div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How do you keep parents updated?</span><span>+</span></button><div class="faq-answer">We keep families informed through regular updates, conversations with teachers and scheduled meetings to discuss your child's experiences and progress.</div></div>
+          <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How do I enquire about fees and admissions?</span><span>+</span></button><div class="faq-answer">Use the enquiry form below or call us on 92435 55222. Our admissions team will share current fees, availability, timings and the documents required.</div></div>
         </div>
       </div>
     </section>
 
     <section class="section contact" id="contact">
       <div class="container contact-grid">
-        <div class="contact-copy"><span class="eyebrow">Your child's next chapter</span><h2>Come in for a little look around.</h2><p>We'd love to meet your family. Get in touch to ask about admissions, arrange a school visit or learn more about our programmes.</p>
-          <div class="contact-line"><span class="contact-icon">01</span><span>Nashik, Maharashtra, India</span></div>
-          <div class="contact-line"><span class="contact-icon">02</span><span>+91 XXXXX XXXXX</span></div>
-          <div class="contact-line"><span class="contact-icon">03</span><span>hello@littlesprouts.in</span></div>
-          <p style="font-size:11px;margin-top:22px">Contact details above are placeholders. Add your actual school address, phone number and email before publishing.</p>
+        <div class="contact-copy"><span class="eyebrow">Your child's next chapter</span><h2>Come in for a little look around.</h2><p>We'd love to meet your family. Get in touch to ask about admissions, arrange a school visit or learn more about our Montessori programmes.</p>
+          <div class="contact-line"><span class="contact-icon">01</span><span>Kuvempunagar, Mysore, Karnataka</span></div>
+          <div class="contact-line"><span class="contact-icon">02</span><a href="tel:+919243555222">+91 92435 55222</a></div>
         </div>
         <form class="contact-form" id="enquiryForm">
           <h3>Book a school visit</h3><p>Share a few details and our team will get back to you.</p>
           <div class="form-row"><div><label for="parentName">Parent's name</label><input id="parentName" name="parentName" placeholder="Your full name" required></div><div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="+91" required></div></div>
-          <div class="form-row"><div><label for="childName">Child's name</label><input id="childName" name="childName" placeholder="Child's name"></div><div><label for="age">Programme of interest</label><select id="age" name="programme"><option value="">Choose a programme</option><option>Playgroup</option><option>Nursery</option><option>Junior Kindergarten</option><option>Not sure yet</option></select></div></div>
+          <div class="form-row"><div><label for="childName">Child's name</label><input id="childName" name="childName" placeholder="Child's name"></div><div><label for="age">Programme of interest</label><select id="age" name="programme"><option value="">Choose a programme</option><option>Playgroup</option><option>Nursery</option><option>LKG</option><option>UKG</option><option>Not sure yet</option></select></div></div>
           <label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us a little about what you're looking for..."></textarea>
           <button class="btn" type="submit">Send enquiry <span>→</span></button>
           <div id="formMessage" role="status">Thank you. This demo form is ready for backend or email integration.</div>
@@ -379,8 +396,8 @@
 
   <footer>
     <div class="container">
-      <div class="footer-top"><a class="brand" href="#home"><span class="brand-mark"><span></span></span><span class="brand-name">little <span>sprouts</span></span></a><p class="footer-tagline">A joyful place for little learners to discover who they are and what they can become.</p><a class="btn btn-light" href="#contact">Plan a visit <span>→</span></a></div>
-      <div class="footer-bottom"><span>© <span id="year"></span> Little Sprouts Preschool, Nashik. All rights reserved.</span><div class="footer-links"><a href="#approach">Our approach</a><a href="#programs">Programmes</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div></div>
+      <div class="footer-top"><a class="brand" href="#home"><span class="brand-mark"><span></span></span><span class="brand-name">alpha <span>cubs</span></span></a><p class="footer-tagline"><strong>Play • Learn • Explore • Grow</strong>Nurturing little minds &amp; happy hearts.</p><a class="btn btn-light" href="#contact">Plan a visit <span>→</span></a></div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Alpha Cubs Preschool, Kuvempunagar, Mysore. All rights reserved.</span><div class="footer-links"><a href="#approach">Montessori approach</a><a href="#programs">Programmes</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div></div>
     </div>
   </footer>
   <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
